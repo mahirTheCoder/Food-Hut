@@ -25,7 +25,13 @@ const Navbar = () => {
           </a>
         </nav>
 
-   
+        {/* Download Button */}
+        <button
+          className="px-6 py-2 bg-amber-600 rounded-4xl border border-white font-medium transition
+                           hover:bg-black hover:text-white"
+        >
+          Download App
+        </button>
       </div>
     </header>
   );
