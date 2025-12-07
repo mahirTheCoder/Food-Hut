@@ -29,7 +29,7 @@ const Navbar = () => {
         </nav>
 
         {/* Button */}
-        <button className="px-6 py-2 bg-amber-600 rounded-full border border-black font-medium text-white transition hover:bg-black">
+        <button className="px-6 py-2 bg-[#F54748] rounded-full border border-black font-medium text-white transition hover:bg-black">
           Download App
         </button>
 
