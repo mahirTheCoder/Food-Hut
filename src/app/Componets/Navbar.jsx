@@ -1,14 +1,16 @@
+import Link from "next/link";
 import React from "react";
-
+import logo from  '../../../public/Logo.png'
+import Image from "next/image";
 const Navbar = () => {
   return (
     <section className="w-full py-6 bg-transparent">
-      <div className="container flex justify-between items-center">
+      <div className="container flex items-center justify-between">
         
         {/* Logo */}
-        <h1 className="text-3xl font-bold tracking-wide text-white">
-          Food<span className="text-[#F65F5F]">Hut</span>
-        </h1>
+        <Link href={"/"}>
+        <Image src={logo} alt="Logo" width={150} height={50} />
+        </Link>
 
         {/* Menu */}
         <nav className="hidden lg:flex items-center gap-12 text-lg font-medium text-white">
@@ -27,7 +29,7 @@ const Navbar = () => {
         </nav>
 
         {/* Button */}
-        <button className="px-6 py-2 bg-amber-600 rounded-full border border-white font-medium text-white transition hover:bg-black">
+        <button className="px-6 py-2 bg-amber-600 rounded-full border border-black font-medium text-white transition hover:bg-black">
           Download App
         </button>
 
