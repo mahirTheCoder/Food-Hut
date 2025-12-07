@@ -2,15 +2,16 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <header className=" text-black py-6">
-      <div className=" container flex justify-between items-center px-4">
+    <section className="w-full py-6 bg-transparent">
+      <div className="container flex justify-between items-center">
+        
         {/* Logo */}
-        <h1 className="text-3xl font-bold tracking-wide">
+        <h1 className="text-3xl font-bold tracking-wide text-white">
           Food<span className="text-[#F65F5F]">Hut</span>
         </h1>
 
-        {/* Menu Items */}
-        <nav className="flex items-center gap-12 text-lg font-medium">
+        {/* Menu */}
+        <nav className="hidden lg:flex items-center gap-12 text-lg font-medium text-white">
           <a href="#" className="transition hover:text-[#F65F5F]">
             Today special offers
           </a>
@@ -25,15 +26,13 @@ const Navbar = () => {
           </a>
         </nav>
 
-        {/* Download Button */}
-        <button
-          className="px-6 py-2 bg-amber-600 rounded-4xl border border-white font-medium transition
-                           hover:bg-black hover:text-white"
-        >
+        {/* Button */}
+        <button className="px-6 py-2 bg-amber-600 rounded-full border border-white font-medium text-white transition hover:bg-black">
           Download App
         </button>
+
       </div>
-    </header>
+    </section>
   );
 };
 
