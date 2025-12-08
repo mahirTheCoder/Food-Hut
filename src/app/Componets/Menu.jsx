@@ -67,124 +67,120 @@ const Menu = () => {
         </div>
 
         {/* -----------menu parts----------- */}
-                {/* Cards Row */}
-                <div className="flex justify-between flex-wrap lg:mt-33 gap-30 lg:gap-0">
-        
-        
-                  {/* ------- Card 1 ------- */}
-                  <div className=" bg-linear-to-b from-gray-500 to-amber-800 w-77 h-92 rounded-2xl  shadow-xl  transition flex flex-col items-center relative mt-[66px]">
-                    {/* ----img part-------- */}
-                    <div className="img absolute top-[-30%]">
-                      <Image src={offer} alt="offer" className="w-63 h-63  " />
-                    </div>
-        
-                    {/* ------rationg part-------- */}
-                    <div className="flex items-center justify-center gap-2 mt-34">
-                      <p className="flex items-center gap-1 text-[#F65F5F] text-sm">
-                        <Image src={ratig} alt="offer" /> <span className="text-lg">★ 4 . 5</span>
-                      </p>
-                    </div>
-        
-                    <h3 className=" text-[#F65F5F]  font-semibold text-lg mt-7.5">
-                      Kebab
-                    </h3>
-                    <p className="text-center w-[243px] text-black text-sm mt-4">
-                      Lorem Ipsum is simply dummy text of the printing and typesetting
-                      industry
-                    </p>
-        
-                    <button className="bg-[#F65F5F] text-white mt-7.5 px-5 py-3 rounded-full hover:bg-[#ff7979] transition">
-                      Order Now
-                    </button>
-                  </div>
-        
-                  
-                  {/* ------- Card 3 ------- */}
-                  <div className=" bg-linear-to-b from-gray-500 to-amber-800 w-77 h-92 rounded-2xl  shadow-xl  transition flex flex-col items-center relative mt-[66px]">
-                    {/* ----img part-------- */}
-                    <div className="img absolute top-[-30%]">
-                      <Image src={offer2} alt="offer" className=" w-63 h-63  " />
-                    </div>
-        
-                    {/* ------rationg part-------- */}
-                    <div className="flex items-center justify-center gap-2 mt-34">
-                      <p className="flex items-center gap-1 text-[#F65F5F] text-sm">
-                        <Image src={ratig} alt="offer" /> <span className="text-lg">★ 4 . 8</span>
-                      </p>
-                    </div>
-        
-                    <h3 className=" text-[#F65F5F]  font-semibold text-lg mt-7.5">
-                   Chicken Tikka
-                    </h3>
-                    <p className="text-center w-[243px] text-black text-sm mt-4">
-                      Lorem Ipsum is simply dummy text of the printing and typesetting
-                      industry
-                    </p>
-        
-                    <button className="bg-[#F65F5F] text-white mt-7.5 px-5 py-3 rounded-full hover:bg-[#ff7979] transition">
-                      Order Now
-                    </button>
-                  </div>
-        
-        
-                  {/* ------- Card 3 ------- */}
-                  <div className=" bg-linear-to-b from-gray-500 to-amber-800 w-77 h-92 rounded-2xl  shadow-xl  transition flex flex-col items-center relative mt-[66px]">
-                    {/* ----img part-------- */}
-                    <div className="img absolute top-[-30%]">
-                      <Image src={offer3} alt="offer" className=" w-63 h-63  " />
-                    </div>
-        
-                    {/* ------rationg part-------- */}
-                    <div className="flex items-center justify-center gap-2 mt-34">
-                      <p className="flex items-center gap-1 text-[#F65F5F] text-sm">
-                       <Image src={ratig} alt="offer" /> <span className="text-lg">★ 4 . 2</span>
-                      </p>
-                    </div>
-        
-                    <h3 className=" text-[#F65F5F]  font-semibold text-lg mt-7.5">
-                     Desi Chowmein
-                    </h3>
-                    <p className="text-center w-[243px] text-black text-sm mt-4">
-                      Lorem Ipsum is simply dummy text of the printing and typesetting
-                      industry
-                    </p>
-        
-                    <button className="bg-[#F65F5F] text-white mt-7.5 px-5 py-3 rounded-full hover:bg-[#ff7979] transition">
-                      Order Now
-                    </button>
-                  </div>
-        
-        
-                  
-                  {/* ------- Card 4 ------- */}
-                  <div className=" bg-linear-to-b from-gray-500 to-amber-800 w-77 h-92 rounded-2xl  shadow-xl  transition flex flex-col items-center relative mt-[66px]">
-                    {/* ----img part-------- */}
-                    <div className="img absolute top-[-30%]">
-                      <Image src={offer4} alt="offer" className=" w-63 h-63  " />
-                    </div>
-        
-                    {/* ------rationg part-------- */}
-                    <div className="flex items-center justify-center gap-2 mt-34">
-                      <p className="flex items-center gap-1 text-[#F65F5F] text-sm">
-                       <Image src={ratig} alt="offer" /> <span className="text-lg">★ 5 . 0</span>
-                      </p>
-                    </div>
-        
-                    <h3 className=" text-[#F65F5F]  font-semibold text-lg mt-7.5">
-                     Chicken Chargha
-                    </h3>
-                    <p className="text-center w-[243px] text-black text-sm mt-4">
-                      Lorem Ipsum is simply dummy text of the printing and typesetting
-                      industry
-                    </p>
-        
-                    <button className="bg-[#F65F5F] text-white mt-7.5 px-5 py-3 rounded-full hover:bg-[#ff7979] transition">
-                      Order Now
-                    </button>
-                  </div>
-        
-             
-                </div>
+        {/* Cards Row */}
+        <div className="flex justify-between flex-wrap lg:mt-33 gap-30 lg:gap-0">
+          {/* ------- Card 1 ------- */}
+          <div className=" bg-linear-to-b from-gray-500 to-amber-800 w-77 h-92 rounded-2xl  shadow-xl  transition flex flex-col items-center relative mt-[66px]">
+            {/* ----img part-------- */}
+            <div className="img absolute top-[-30%]">
+              <Image src={offer} alt="offer" className="w-63 h-63  " />
+            </div>
+
+            {/* ------rationg part-------- */}
+            <div className="flex items-center justify-center gap-2 mt-34">
+              <p className="flex items-center gap-1 text-[#F65F5F] text-sm">
+                <Image src={ratig} alt="offer" />{" "}
+                <span className="text-lg">★ 4 . 5</span>
+              </p>
+            </div>
+
+            <h3 className=" text-[#F65F5F]  font-semibold text-lg mt-7.5">
+              Kebab
+            </h3>
+            <p className="text-center w-[243px] text-black text-sm mt-4">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry
+            </p>
+
+            <button className="bg-[#F65F5F] text-white mt-7.5 px-5 py-3 rounded-full hover:bg-[#ff7979] transition">
+              Order Now
+            </button>
+          </div>
+
+          {/* ------- Card 3 ------- */}
+          <div className=" bg-linear-to-b from-gray-500 to-amber-800 w-77 h-92 rounded-2xl  shadow-xl  transition flex flex-col items-center relative mt-[66px]">
+            {/* ----img part-------- */}
+            <div className="img absolute top-[-30%]">
+              <Image src={offer2} alt="offer" className=" w-63 h-63  " />
+            </div>
+
+            {/* ------rationg part-------- */}
+            <div className="flex items-center justify-center gap-2 mt-34">
+              <p className="flex items-center gap-1 text-[#F65F5F] text-sm">
+                <Image src={ratig} alt="offer" />{" "}
+                <span className="text-lg">★ 4 . 8</span>
+              </p>
+            </div>
+
+            <h3 className=" text-[#F65F5F]  font-semibold text-lg mt-7.5">
+              Chicken Tikka
+            </h3>
+            <p className="text-center w-[243px] text-black text-sm mt-4">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry
+            </p>
+
+            <button className="bg-[#F65F5F] text-white mt-7.5 px-5 py-3 rounded-full hover:bg-[#ff7979] transition">
+              Order Now
+            </button>
+          </div>
+
+          {/* ------- Card 3 ------- */}
+          <div className=" bg-linear-to-b from-gray-500 to-amber-800 w-77 h-92 rounded-2xl  shadow-xl  transition flex flex-col items-center relative mt-[66px]">
+            {/* ----img part-------- */}
+            <div className="img absolute top-[-30%]">
+              <Image src={offer3} alt="offer" className=" w-63 h-63  " />
+            </div>
+
+            {/* ------rationg part-------- */}
+            <div className="flex items-center justify-center gap-2 mt-34">
+              <p className="flex items-center gap-1 text-[#F65F5F] text-sm">
+                <Image src={ratig} alt="offer" />{" "}
+                <span className="text-lg">★ 4 . 2</span>
+              </p>
+            </div>
+
+            <h3 className=" text-[#F65F5F]  font-semibold text-lg mt-7.5">
+              Desi Chowmein
+            </h3>
+            <p className="text-center w-[243px] text-black text-sm mt-4">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry
+            </p>
+
+            <button className="bg-[#F65F5F] text-white mt-7.5 px-5 py-3 rounded-full hover:bg-[#ff7979] transition">
+              Order Now
+            </button>
+          </div>
+
+          {/* ------- Card 4 ------- */}
+          <div className=" bg-linear-to-b from-gray-500 to-amber-800 w-77 h-92 rounded-2xl  shadow-xl  transition flex flex-col items-center relative mt-[66px]">
+            {/* ----img part-------- */}
+            <div className="img absolute top-[-30%]">
+              <Image src={offer4} alt="offer" className=" w-63 h-63  " />
+            </div>
+
+            {/* ------rationg part-------- */}
+            <div className="flex items-center justify-center gap-2 mt-34">
+              <p className="flex items-center gap-1 text-[#F65F5F] text-sm">
+                <Image src={ratig} alt="offer" />{" "}
+                <span className="text-lg">★ 5 . 0</span>
+              </p>
+            </div>
+
+            <h3 className=" text-[#F65F5F]  font-semibold text-lg mt-7.5">
+              Chicken Chargha
+            </h3>
+            <p className="text-center w-[243px] text-black text-sm mt-4">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry
+            </p>
+
+            <button className="bg-[#F65F5F] text-white mt-7.5 px-5 py-3 rounded-full hover:bg-[#ff7979] transition">
+              Order Now
+            </button>
+          </div>
+        </div>
       </div>
     </section>
   );
