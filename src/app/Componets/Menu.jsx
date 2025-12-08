@@ -1,185 +1,125 @@
-import React from "react";
-import offer from "../../../public/offers.png";
-import offer4 from "../../../public/offer4.png";
-import offer3 from "../../../public/offer3.png";
-import offer2 from "../../../public/offer2.png";
-import ratig from "../../../public/rating.png";
-
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
+
+import offer from "../../../public/offers.png";
+import offer2 from "../../../public/offer2.png";
+import offer3 from "../../../public/offer3.png";
+import offer4 from "../../../public/offer4.png";
+import rating from "../../../public/rating.png";
+
+const menuData = {
+  Ramen: [
+    { img: offer, title: "Kebab", rate: "4.5" },
+    { img: offer2, title: "Chicken Tikka", rate: "4.8" },
+    { img: offer3, title: "Desi Chowmein", rate: "4.2" },
+    { img: offer4, title: "Chicken Chargha", rate: "5.0" },
+  ],
+  Breakfast: [
+    { img: offer2, title: "Egg Toast", rate: "4.1" },
+    { img: offer3, title: "Pancake", rate: "4.3" },
+    { img: offer, title: "Oats Bowl", rate: "4.6" },
+    { img: offer4, title: "Fruit Salad", rate: "4.0" },
+  ],
+  Lunch: [
+    { img: offer3, title: "Beef Curry", rate: "4.7" },
+    { img: offer4, title: "Chicken Rice", rate: "4.4" },
+    { img: offer2, title: "Biriyani Special", rate: "4.9" },
+    { img: offer, title: "Veg Thali", rate: "4.2" },
+  ],
+  Dinner: [], // default দেখাবে
+  Maxican: [],
+  Italian: [],
+  Desserts: [],
+  Drinks: [],
+};
+
+const defaultCards = [
+  { img: offer, title: "Kebab", rate: "4.5" },
+  { img: offer2, title: "Chicken Tikka", rate: "4.8" },
+  { img: offer3, title: "Desi Chowmein", rate: "4.2" },
+  { img: offer4, title: "Chicken Chargha", rate: "5.0" },
+];
+
 const Menu = () => {
+  const [active, setActive] = useState("Ramen");
+
+  const selectedCards =
+    menuData[active]?.length > 0 ? menuData[active] : defaultCards;
+
   return (
-    <section id="Menu" className="w-full py-20  text-white">
+    <section id="Menu" className="w-full py-20 text-white">
       <div className="container mx-auto text-center">
-        {/* Heading */}
-        <h2 className="text-4xl font-bold leading-snug mb-10 space-y-2">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-yellow-400 underline underline-offset-8 decoration-[3px]">
+
+        {/* ---------- HEADING ---------- */}
+        <h2 className="text-4xl font-bold mb-10">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-yellow-400 underline decoration-[3px]">
             Menu
           </span>{" "}
-          <span className="text-white">That</span>{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400 underline underline-offset-8 decoration-[3px]">
+          <span>That</span>{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400 underline decoration-[3px]">
             Always
           </span>{" "}
-          <span className="text-white">Make You</span>
-          <br />
-          <span className="underline-offset-8   text-blue-300">
-            Fall In
-          </span>{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600 underline underline-offset-8">
+          Make You <br />
+          <span className="text-blue-300">Fall In</span>{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600 underline">
             Love
           </span>
         </h2>
 
-        {/* Menu Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mt-8">
-          {/* Active Button */}
-          <button className="px-6 py-2 rounded-full bg-[#F65F5F] text-white font-medium">
-            Ramen
-          </button>
-
-          {/* Other Buttons */}
-          <button className="px-6 py-2 rounded-full border border-gray-500 hover:border-[#F65F5F] hover:text-[#F65F5F] transition">
-            Breakfast
-          </button>
-
-          <button className="px-6 py-2 rounded-full border border-gray-500 hover:border-[#F65F5F] hover:text-[#F65F5F] transition">
-            Lunch
-          </button>
-
-          <button className="px-6 py-2 rounded-full border border-gray-500 hover:border-[#F65F5F] hover:text-[#F65F5F] transition">
-            Dinner
-          </button>
-
-          <button className="px-6 py-2 rounded-full border border-gray-500 hover:border-[#F65F5F] hover:text-[#F65F5F] transition">
-            Maxican
-          </button>
-
-          <button className="px-6 py-2 rounded-full border border-gray-500 hover:border-[#F65F5F] hover:text-[#F65F5F] transition">
-            Italian
-          </button>
-
-          <button className="px-6 py-2 rounded-full border border-gray-500 hover:border-[#F65F5F] hover:text-[#F65F5F] transition">
-            Desserts
-          </button>
-
-          <button className="px-6 py-2 rounded-full border border-gray-500 hover:border-[#F65F5F] hover:text-[#F65F5F] transition">
-            Drinks
-          </button>
+        {/* ---------- BUTTON GROUP ---------- */}
+        <div className="flex flex-wrap justify-center gap-4 mb-10">
+          {Object.keys(menuData).map((item) => (
+            <button
+              key={item}
+              onClick={() => setActive(item)}
+              className={`px-6 py-2 rounded-full transition 
+                ${
+                  active === item
+                    ? "bg-[#F65F5F] text-white"
+                    : "border border-gray-500 hover:border-[#F65F5F] hover:text-[#F65F5F]"
+                }
+              `}
+            >
+              {item}
+            </button>
+          ))}
         </div>
 
-        {/* -----------menu parts----------- */}
-        {/* Cards Row */}
-        <div className="flex justify-between flex-wrap lg:mt-33 gap-30 lg:gap-0">
-          {/* ------- Card 1 ------- */}
-          <div className=" bg-linear-to-b from-gray-500 to-amber-800 w-77 h-92 rounded-2xl  shadow-xl  transition flex flex-col items-center relative mt-[66px]">
-            {/* ----img part-------- */}
-            <div className="img absolute top-[-30%]">
-              <Image src={offer} alt="offer" className="w-63 h-63  " />
-            </div>
+        {/* ---------- MENU CARDS ---------- */}
+        <div className="flex  flex-wrap justify-between mt-27 gap-30 lg:gap-0 ">
+          {selectedCards.map((card, i) => (
+            <div
+              key={i}
+              className="bg-gradient-to-b from-gray-500 to-amber-800 w-72 h-[380px] rounded-2xl shadow-xl flex flex-col items-center relative mt-16"
+            >
+              {/* IMAGE */}
+              <div className="absolute -top-28">
+                <Image src={card.img} alt="offer" className="w-63 h-63" />
+              </div>
 
-            {/* ------rationg part-------- */}
-            <div className="flex items-center justify-center gap-2 mt-34">
-              <p className="flex items-center gap-1 text-[#F65F5F] text-sm">
-                <Image src={ratig} alt="offer" />{" "}
-                <span className="text-lg">★ 4 . 5</span>
+              {/* RATING */}
+              <div className="flex items-center gap-2 mt-40">
+                <Image src={rating} alt="rating" className="w-[74px]" />
+                <span className="text-[#F65F5F] text-lg">★ {card.rate}</span>
+              </div>
+
+              {/* TITLE */}
+              <h3 className="text-[#F65F5F] font-semibold text-lg mt-8">
+                {card.title}
+              </h3>
+
+              {/* DESCRIPTION */}
+              <p className="text-center w-56 text-black text-sm mt-6">
+                Lorem Ipsum is simply dummy text of the printing industry.
               </p>
+
+              {/* BUTTON */}
+              <button className="bg-[#F65F5F] text-white mt-7.5 px-5 py-3 rounded-full hover:bg-[#ff7979] transition">
+                Order Now
+              </button>
             </div>
-
-            <h3 className=" text-[#F65F5F]  font-semibold text-lg mt-7.5">
-              Kebab
-            </h3>
-            <p className="text-center w-[243px] text-black text-sm mt-4">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry
-            </p>
-
-            <button className="bg-[#F65F5F] text-white mt-7.5 px-5 py-3 rounded-full hover:bg-[#ff7979] transition">
-              Order Now
-            </button>
-          </div>
-
-          {/* ------- Card 3 ------- */}
-          <div className=" bg-linear-to-b from-gray-500 to-amber-800 w-77 h-92 rounded-2xl  shadow-xl  transition flex flex-col items-center relative mt-[66px]">
-            {/* ----img part-------- */}
-            <div className="img absolute top-[-30%]">
-              <Image src={offer2} alt="offer" className=" w-63 h-63  " />
-            </div>
-
-            {/* ------rationg part-------- */}
-            <div className="flex items-center justify-center gap-2 mt-34">
-              <p className="flex items-center gap-1 text-[#F65F5F] text-sm">
-                <Image src={ratig} alt="offer" />{" "}
-                <span className="text-lg">★ 4 . 8</span>
-              </p>
-            </div>
-
-            <h3 className=" text-[#F65F5F]  font-semibold text-lg mt-7.5">
-              Chicken Tikka
-            </h3>
-            <p className="text-center w-[243px] text-black text-sm mt-4">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry
-            </p>
-
-            <button className="bg-[#F65F5F] text-white mt-7.5 px-5 py-3 rounded-full hover:bg-[#ff7979] transition">
-              Order Now
-            </button>
-          </div>
-
-          {/* ------- Card 3 ------- */}
-          <div className=" bg-linear-to-b from-gray-500 to-amber-800 w-77 h-92 rounded-2xl  shadow-xl  transition flex flex-col items-center relative mt-[66px]">
-            {/* ----img part-------- */}
-            <div className="img absolute top-[-30%]">
-              <Image src={offer3} alt="offer" className=" w-63 h-63  " />
-            </div>
-
-            {/* ------rationg part-------- */}
-            <div className="flex items-center justify-center gap-2 mt-34">
-              <p className="flex items-center gap-1 text-[#F65F5F] text-sm">
-                <Image src={ratig} alt="offer" />{" "}
-                <span className="text-lg">★ 4 . 2</span>
-              </p>
-            </div>
-
-            <h3 className=" text-[#F65F5F]  font-semibold text-lg mt-7.5">
-              Desi Chowmein
-            </h3>
-            <p className="text-center w-[243px] text-black text-sm mt-4">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry
-            </p>
-
-            <button className="bg-[#F65F5F] text-white mt-7.5 px-5 py-3 rounded-full hover:bg-[#ff7979] transition">
-              Order Now
-            </button>
-          </div>
-
-          {/* ------- Card 4 ------- */}
-          <div className=" bg-linear-to-b from-gray-500 to-amber-800 w-77 h-92 rounded-2xl  shadow-xl  transition flex flex-col items-center relative mt-[66px]">
-            {/* ----img part-------- */}
-            <div className="img absolute top-[-30%]">
-              <Image src={offer4} alt="offer" className=" w-63 h-63  " />
-            </div>
-
-            {/* ------rationg part-------- */}
-            <div className="flex items-center justify-center gap-2 mt-34">
-              <p className="flex items-center gap-1 text-[#F65F5F] text-sm">
-                <Image src={ratig} alt="offer" />{" "}
-                <span className="text-lg">★ 5 . 0</span>
-              </p>
-            </div>
-
-            <h3 className=" text-[#F65F5F]  font-semibold text-lg mt-7.5">
-              Chicken Chargha
-            </h3>
-            <p className="text-center w-[243px] text-black text-sm mt-4">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry
-            </p>
-
-            <button className="bg-[#F65F5F] text-white mt-7.5 px-5 py-3 rounded-full hover:bg-[#ff7979] transition">
-              Order Now
-            </button>
-          </div>
+          ))}
         </div>
       </div>
     </section>
