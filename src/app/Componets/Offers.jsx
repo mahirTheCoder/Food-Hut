@@ -1,5 +1,6 @@
 import React from "react";
 import offer from "../../../public/offers.png";
+import offer4 from "../../../public/offer4.png";
 import ratig from "../../../public/rating.png";
 import Image from "next/image";
 
@@ -21,6 +22,8 @@ const Offers = () => {
 
         {/* Cards Row */}
         <div className="flex justify-between flex-wrap">
+
+
           {/* ------- Card 1 ------- */}
           <div className=" bg-linear-to-b from-gray-500 to-amber-800 w-77 h-92 rounded-2xl  shadow-xl  transition flex flex-col items-center relative mt-[66px]">
             {/* ----img part-------- */}
@@ -47,6 +50,36 @@ const Offers = () => {
               Order Now
             </button>
           </div>
+
+          
+          {/* ------- Card 2 ------- */}
+          <div className=" bg-linear-to-b from-gray-500 to-amber-800 w-77 h-92 rounded-2xl  shadow-xl  transition flex flex-col items-center relative mt-[66px]">
+            {/* ----img part-------- */}
+            <div className="img absolute top-[-30%]">
+              <Image src={offer4} alt="offer" className="w-63 h-63  " />
+            </div>
+
+            {/* ------rationg part-------- */}
+            <div className="flex items-center justify-center gap-2 mt-34">
+              <p className="flex items-center gap-1 text-[#F65F5F] text-sm">
+                <Image src={ratig} alt="offer" />★ 5.0
+              </p>
+            </div>
+
+            <h3 className=" text-[#F65F5F]  font-semibold text-lg mt-7.5">
+             Chicken Chargha
+            </h3>
+            <p className="text-center w-[243px] text-black text-sm mt-4">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry
+            </p>
+
+            <button className="bg-[#F65F5F] text-white mt-7.5 px-5 py-3 rounded-full hover:bg-[#ff7979] transition">
+              Order Now
+            </button>
+          </div>
+
+
         </div>
       </div>
     </section>
