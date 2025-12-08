@@ -1,49 +1,52 @@
 import React from "react";
+import offer from "../../../public/offers.png";
+import ratig from "../../../public/rating.png";
+import Image from "next/image";
 
 const Offers = () => {
   return (
-    <section id="Offers" className="w-full py-20  text-white">
+    <section id="Offers" className="w-full py-40  text-white">
       <div className="container mx-auto">
-        
         {/* Heading */}
         <div className="text-center mb-14">
           <h2 className="text-4xl font-bold">
             Today <span className="text-[#F65F5F]">Special</span> Offers
           </h2>
-          <p className="text-gray-300 max-w-2xl mx-auto mt-4 text-sm">
+          <p className="text-gray-300 max-w-4xl mx-auto mt-4 text-sm">
             Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting
-            Industry. Lorem Ipsum Has Been The Industry's Standard Dummy
-            Text Ever Since The 1500s
+            Industry. Lorem Ipsum Has Been The Industry's Standard Dummy Text
+            Ever Since The 1500s
           </p>
         </div>
 
         {/* Cards Row */}
         <div className="flex justify-between flex-wrap">
-
           {/* ------- Card 1 ------- */}
-          <div className="bg-[#2A2A2A] w-77 rounded-2xl p-5 shadow-xl hover:scale-[1.03] transition relative">
-            <div className="absolute top-[50%] mx-auto w-40 h-40 rounded-full overflow-hidden">
-              <img src="/kebab.jpg" className="w-full h-full object-cover" />
-           
+          <div className=" bg-linear-to-b from-gray-500 to-amber-800 w-77 h-92 rounded-2xl  shadow-xl  transition flex flex-col items-center relative mt-[66px]">
+            {/* ----img part-------- */}
+            <div className="img absolute top-[-30%]">
+              <Image src={offer} alt="offer" className="w-63 h-63  " />
             </div>
 
-            <div className="flex items-center justify-center gap-2 mt-4">
-              <img src="/u1.jpg" className="w-8 h-8 rounded-full" />
-              <img src="/u2.jpg" className="w-8 h-8 rounded-full" />
-              <p className="flex items-center gap-1 text-yellow-400 text-sm">★ 4.5</p>
+            {/* ------rationg part-------- */}
+            <div className="flex items-center justify-center gap-2 mt-34">
+              <p className="flex items-center gap-1 text-[#F65F5F] text-sm">
+                <Image src={ratig} alt="offer" />★ 4.5
+              </p>
             </div>
 
-            <h3 className="text-center font-semibold text-lg mt-3">Kebab</h3>
-            <p className="text-center text-gray-400 text-sm mt-1">
-              Lorem Ipsum Is Simply Dummy Text Of The Printing
+            <h3 className=" text-[#F65F5F]  font-semibold text-lg mt-7.5">
+              Kebab
+            </h3>
+            <p className="text-center w-[243px] text-black text-sm mt-4">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry
             </p>
 
-            <button className="bg-[#F65F5F] text-white mt-4 w-full py-2 rounded-full hover:bg-[#ff7979] transition">
+            <button className="bg-[#F65F5F] text-white mt-7.5 px-5 py-3 rounded-full hover:bg-[#ff7979] transition">
               Order Now
             </button>
           </div>
-
-    
         </div>
       </div>
     </section>
