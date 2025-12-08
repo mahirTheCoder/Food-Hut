@@ -3,12 +3,13 @@ import offer from "../../../public/offers.png";
 import offer4 from "../../../public/offer4.png";
 import offer3 from "../../../public/offer3.png";
 import offer2 from "../../../public/offer2.png";
+import pata from "../../../public/pata.png";
 import ratig from "../../../public/rating.png";
 import Image from "next/image";
 
 const Offers = () => {
   return (
-    <section id="Offers" className="w-full py-40  text-white">
+    <section id="Offers" className="w-full py-40  text-white relative">
       <div className="container mx-auto">
         {/* Heading */}
         <div className="text-center mb-14">
@@ -36,7 +37,7 @@ const Offers = () => {
             {/* ------rationg part-------- */}
             <div className="flex items-center justify-center gap-2 mt-34">
               <p className="flex items-center gap-1 text-[#F65F5F] text-sm">
-                <Image src={ratig} alt="offer" /> <span className="text-2xl">★ 4 . 5</span>
+                <Image src={ratig} alt="offer" /> <span className="text-lg">★ 4 . 5</span>
               </p>
             </div>
 
@@ -64,7 +65,7 @@ const Offers = () => {
             {/* ------rationg part-------- */}
             <div className="flex items-center justify-center gap-2 mt-34">
               <p className="flex items-center gap-1 text-[#F65F5F] text-sm">
-                <Image src={ratig} alt="offer" /> <span className="text-2xl">★ 4 . 8</span>
+                <Image src={ratig} alt="offer" /> <span className="text-lg">★ 4 . 8</span>
               </p>
             </div>
 
@@ -86,13 +87,13 @@ const Offers = () => {
           <div className=" bg-linear-to-b from-gray-500 to-amber-800 w-77 h-92 rounded-2xl  shadow-xl  transition flex flex-col items-center relative mt-[66px]">
             {/* ----img part-------- */}
             <div className="img absolute top-[-30%]">
-              <Image src={offer3} alt="offer" className="w-63 h-63  " />
+              <Image src={offer3} alt="offer" className=" w-63 h-63  " />
             </div>
 
             {/* ------rationg part-------- */}
             <div className="flex items-center justify-center gap-2 mt-34">
               <p className="flex items-center gap-1 text-[#F65F5F] text-sm">
-               <Image src={ratig} alt="offer" /> <span className="text-2xl">★ 4 . 2</span>
+               <Image src={ratig} alt="offer" /> <span className="text-lg">★ 4 . 2</span>
               </p>
             </div>
 
@@ -115,13 +116,13 @@ const Offers = () => {
           <div className=" bg-linear-to-b from-gray-500 to-amber-800 w-77 h-92 rounded-2xl  shadow-xl  transition flex flex-col items-center relative mt-[66px]">
             {/* ----img part-------- */}
             <div className="img absolute top-[-30%]">
-              <Image src={offer4} alt="offer" className="w-63 h-63  " />
+              <Image src={offer4} alt="offer" className=" w-63 h-63  " />
             </div>
 
             {/* ------rationg part-------- */}
             <div className="flex items-center justify-center gap-2 mt-34">
               <p className="flex items-center gap-1 text-[#F65F5F] text-sm">
-               <Image src={ratig} alt="offer" /> <span className="text-2xl">★ 5 . 0</span>
+               <Image src={ratig} alt="offer" /> <span className="text-lg">★ 5 . 0</span>
               </p>
             </div>
 
@@ -138,7 +139,10 @@ const Offers = () => {
             </button>
           </div>
 
-
+          {/* -------pata img------- */}
+          <div className="pata hidden lg:block absolute bottom-r-0 bottom-0 right-0 lg:right-0">
+            <Image src={pata} alt="pata"   />
+          </div>
         </div>
       </div>
     </section>
