@@ -3,6 +3,7 @@ import Navbar from "./Componets/Navbar";
 import Banner from "./Componets/Banner";
 import Offers from "./Componets/Offers";
 import Service from "./Componets/Service";
+import Menu from "./Componets/Menu";
 
 const page = () => {
   return (
@@ -11,6 +12,7 @@ const page = () => {
       <Banner />
       <Offers/>
       <Service/>
+      <Menu/>
     </>
   );
 };
