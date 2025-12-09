@@ -36,6 +36,26 @@ const Footer = () => {
             </div>
           </div>
 
+          {/* 2. About Us Links */}
+          <div className="space-y-4">
+            <h4 className="text-xl font-semibold text-[#F54748] mb-4">About Us</h4>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <a href="#" className="text-gray-400 hover:text-white transition">About Us</a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-white transition">Service Us</a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-white transition">Contact</a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-white transition">Company</a>
+              </li>
+            </ul>
+          </div>
+
+  
 
       </div>
     </footer>
