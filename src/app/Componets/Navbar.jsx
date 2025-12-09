@@ -18,7 +18,7 @@ const Navbar = () => {
   ];
 
   return (
-    <section className="w-full py-4 sm:py-6 bg-transparent sticky top-0 z-50">
+    <section className="w-full py-4 sm:py-6 bg-gray-950 border-b border-gray-800 sticky top-0 z-50">
       <div className="container mx-auto px-4 flex items-center justify-between">
         
         {/* Logo */}

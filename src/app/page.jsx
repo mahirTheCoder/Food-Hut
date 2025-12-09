@@ -4,6 +4,7 @@ import Banner from "./Componets/Banner";
 import Offers from "./Componets/Offers";
 import Service from "./Componets/Service";
 import Menu from "./Componets/Menu";
+import Order from "./Componets/Order";
 
 const page = () => {
   return (
@@ -13,6 +14,7 @@ const page = () => {
       <Offers/>
       <Service/>
       <Menu/>
+      <Order/>
     </>
   );
 };

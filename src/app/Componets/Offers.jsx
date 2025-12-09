@@ -9,14 +9,14 @@ import Image from "next/image";
 
 const Offers = () => {
   return (
-    <section id="Offers" className="w-full py-40  text-white relative">
+    <section id="Offers" className="w-full lg:py-40  text-white relative">
       <div className="container mx-auto">
         {/* Heading */}
         <div className="text-center mb-14">
-          <h2 className="text-4xl font-bold">
+          <h2 className="text-5xl  font-bold">
             Today <span className="text-[#F65F5F]">Special</span> Offers
           </h2>
-          <p className="text-gray-300 max-w-4xl mx-auto mt-4 text-sm">
+          <p className="text-gray-300 max-w-4xl mx-auto mt-10 text-sm">
             Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting
             Industry. Lorem Ipsum Has Been The Industry's Standard Dummy Text
             Ever Since The 1500s

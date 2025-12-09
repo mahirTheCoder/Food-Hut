@@ -18,7 +18,7 @@ const Service = () => {
 
         {/* Right Content */}
         <div className="w-full lg:w-1/2">
-          <h2 className="lg:text-4xl text-2xl font-bold leading-snug mb-4">
+          <h2 className="lg:text-5xl text-2xl font-bold leading-snug mb-4">
             We are <span className="text-[#F65F5F]">more</span> than <br />
             <span className="text-[#F6C64E]">multiple</span> service
           </h2>

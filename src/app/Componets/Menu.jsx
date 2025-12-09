@@ -52,7 +52,7 @@ const Menu = () => {
       <div className="container mx-auto text-center">
 
         {/* ---------- HEADING ---------- */}
-        <h2 className="lg:text-4xl text-xl font-bold mb-10">
+        <h2 className="lg:text-5xl -tracking-tight text-xl font-bold mb-10">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-yellow-400 underline decoration-[3px]">
             Menu
           </span>{" "}
