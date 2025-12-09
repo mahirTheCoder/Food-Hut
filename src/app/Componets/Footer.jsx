@@ -74,7 +74,34 @@ const Footer = () => {
             </ul>
           </div>
 
-    
+          {/* 4. Get in touch (Newsletter Signup) */}
+          <div className="space-y-4">
+            <h4 className="text-xl font-semibold text-[#F54748] mb-4">Get in touch</h4>
+            
+            <p className="text-sm text-gray-400 max-w-xs mb-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            </p>
+            
+            {/* Email Input and Subscribe Button */}
+            <div className="flex space-x-2">
+              {/* Input field */}
+              <input
+                type="email"
+                placeholder="Email"
+                className="p-3 w-full max-w-[200px] bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F54748] border border-transparent hover:border-gray-600 transition"
+              />
+              {/* Subscribe Button */}
+              <button className="px-5 py-3 bg-[#F54748] text-white font-medium rounded-lg transition hover:bg-[#E04040]">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        {/* --- Copyright Section --- */}
+        <div className="pt-8 text-center text-gray-500 text-sm">
+          Copyright &copy; 2022 Foodhut.
+        </div>
 
       </div>
     </footer>
