@@ -81,7 +81,17 @@ const Order = () => {
           </div>
                
 
-  
+          {/* --------img part----- */}
+          <div className="w-full lg:w-1/2 flex justify-center lg:justify-end order-1 lg:order-2 relative max-w-lg mx-auto lg:max-w-full">
+            <Image
+              src={order}
+              alt="Order via Mobile App"
+              className="w-full h-auto"
+              width={500}
+              height={500}
+            />
+          </div>
+          
         </div>
       </div>
     </section>
