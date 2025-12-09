@@ -13,10 +13,10 @@ const Offers = () => {
       <div className="container mx-auto">
         {/* Heading */}
         <div className="text-center mb-14">
-          <h2 className="text-5xl  font-bold">
+          <h2 className="lg:text-5xl text-2xl  font-bold">
             Today <span className="text-[#F65F5F]">Special</span> Offers
           </h2>
-          <p className="text-gray-300 max-w-4xl mx-auto mt-10 text-sm">
+          <p className="text-gray-300 max-w-4xl mx-auto mt-10 lg:text-sm text-xs">
             Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting
             Industry. Lorem Ipsum Has Been The Industry's Standard Dummy Text
             Ever Since The 1500s
