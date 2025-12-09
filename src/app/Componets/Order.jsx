@@ -30,8 +30,58 @@ const Order = () => {
               food delivery.
             </p>
 
-     
+            {/* App Store Buttons (Stylized) */}
+            <div className="flex flex-wrap justify-center lg:justify-start gap-4">
+              {/* Google Play Button */}
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  flex items-center space-x-2 px-4 py-2 bg-gray-900 rounded-lg 
+                  shadow-lg border border-gray-700
+                  transition-all duration-300
+                  hover:bg-gray-700 hover:shadow-xl
+                "
+              >
+                <FaGooglePlay className="text-white text-2xl" />
+                <div className="text-left leading-none">
+                  <span className="text-xs text-gray-400 block uppercase">
+                    GET IT ON
+                  </span>
+                  <span className="text-base font-semibold text-white block">
+                    Google Play
+                  </span>
+                </div>
+              </a>
 
+              {/* App Store Button */}
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  flex items-center space-x-2 px-4 py-2 bg-gray-900 rounded-lg 
+                  shadow-lg border border-gray-700
+                  transition-all duration-300
+                  hover:bg-gray-700 hover:shadow-xl
+                "
+              >
+                <FaApple className="text-white text-2xl" />
+                <div className="text-left leading-none">
+                  <span className="text-xs text-gray-400 block uppercase">
+                    Download on the
+                  </span>
+                  <span className="text-base font-semibold text-white block">
+                    App Store
+                  </span>
+                </div>
+              </a>
+            </div>
+          </div>
+               
+
+  
         </div>
       </div>
     </section>
